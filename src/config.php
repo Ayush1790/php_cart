@@ -2,7 +2,7 @@
 session_start();
 header('location:product.php');
 // creating the array
-$_SESSION[$products] = array(
+$products = array(
     array(
         "id" => 101,
         "name" => "football",

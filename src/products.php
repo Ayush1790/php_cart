@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,8 @@ session_start();
 		<div id="products">
 			<?php
 			// displaying the array dynamically
-			foreach ($_SESSION[$products] as $productkey => $productvalue) {
+			include 'config.php';
+			foreach ($products as $productkey => $productvalue) {
 				echo "<div id='product-$productvalue[id]' class='product'><img src='$productvalue[img]'>
 				<h3 class='title'><a href='#'> $productvalue[name]</a></h3>
 				<span>Price: $$productvalue[price]</span>
